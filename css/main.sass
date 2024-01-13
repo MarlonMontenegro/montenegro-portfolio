@@ -1,0 +1,177 @@
+/* ====== Import Fonts  ====== */
+
+@font-face
+  font-family: spaceGrotesk
+  src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype')
+
+/* ====== Colors variables  ====== */
+
+$primary-black: hsl(0, 0%, 8%)
+$primary-green: hsl(153, 71%, 59%)
+$neutral-black: hsl(0, 0%, 14%)
+$neutral-grey: hsl(0, 0%, 85%)
+$neutral-white: hsl(0, 0%, 100%)
+
+/* ====== Typography variables  ====== */
+
+//heading XL
+
+$space-grotesk-font: 'spaceGrotesk', sans-serif
+$heading-xl-size: 88px
+$heading-xl-line: 88px
+$heading-xl-spacing: -2.5px
+
+//heading L
+
+$heading-l-size: 40px
+$heading-l-line: 56px
+$heading-l-spacing: -1.5px
+
+//heading M
+
+$heading-m-size: 24px
+$heading-m-line: 32px
+
+//Body
+
+$body-size: 18px
+$body-line: 28px
+$body-wight: 500
+
+/* ====== Buttons variables  ====== */
+
+//Button typography
+
+$btn-font-size: 26px
+$btn-weight: 700
+$btn-line-height: 75px
+$btn-letter-spacing: 2.286px
+
+//Button styles
+$btn-width: 120px
+$btn-height: 100px
+
+
+//BreakPoints
+
+$breakpoint-tablet: 768px
+$breakpoint-desktop: 1024px
+
+/* ====== Mixin for responsive behavior ====== */
+
+@mixin tablet
+  @media (min-width: $breakpoint-tablet)
+    @content
+
+
+@mixin desktop
+  @media (min-width: $breakpoint-desktop)
+    @content
+
+
+@mixin flex-behavior-column
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+/* ====== Mixin for standard styles ====== */
+
+@mixin btn-idle
+  font-family: $space-grotesk-font
+  font-weight: $btn-weight
+  font-size: $btn-font-size
+  line-height: $btn-line-height
+  letter-spacing: $btn-letter-spacing
+  width: auto
+  background-color: inherit
+  color: $neutral-white
+  text-transform: uppercase
+  gap: 10px
+  border: 0
+  border-bottom: 2px $primary-green solid
+
+
+@mixin border-bottom-green-effect
+  border-bottom: $primary-green 4px solid
+
+
+/* ====== General styles ====== */
+
+body
+  background-color: $primary-black
+  color: $neutral-white
+  font-family: $space-grotesk-font
+
+.divider
+  width: 380px
+  height: 2px
+  background-color: $neutral-white
+  margin-top: 100px
+  margin-bottom: 50px
+
+.btn
+  @include btn-idle
+
+
+/* ====== Header styles ====== */
+//Social Media Icons
+
+.header-container
+  @include flex-behavior-column
+
+.title-name-logo
+  font-weight: 700
+  font-size: 38px
+  line-height: $heading-xl-line
+  letter-spacing: $heading-l-spacing
+
+.social-media-icons
+  display: flex
+  list-style: none
+  gap: 40px
+  flex-direction: row
+  margin-right: 40px
+  margin-top: -15px
+
+.social-media-icons li a img
+  width: 35px
+  height: auto
+
+/* ====== Main styles ====== */
+
+.container
+  @include flex-behavior-column
+
+.main-text-greeting
+  text-align: center
+  font-size: $heading-l-size
+
+.main-text-greeting span
+  @include border-bottom-green-effect
+
+.main-text
+  text-align: center
+  font-size: $heading-m-size
+  color: $neutral-grey
+
+
+/* ====== Technologies styles ===== = */
+
+.technologies-container
+  @include flex-behavior-column
+  text-align: center
+
+.technologies-container h1
+  font-size: $heading-l-size
+
+.technologies-container p
+  font-size: $heading-m-size
+  color: $neutral-grey
+  margin-top: -20px
+
+/* ====== Technologies styles ===== = */
+
+.footer-container
+  @include flex-behavior-column
+  padding-bottom: 50px

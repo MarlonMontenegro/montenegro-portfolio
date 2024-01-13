@@ -1,0 +1,121 @@
+/* ====== Import Fonts  ====== */
+@font-face {
+  font-family: spaceGrotesk;
+  src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+/* ====== Colors variables  ====== */
+/* ====== Typography variables  ====== */
+/* ====== Buttons variables  ====== */
+/* ====== Mixin for responsive behavior ====== */
+/* ====== Mixin for standard styles ====== */
+/* ====== General styles ====== */
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  font-family: "spaceGrotesk", sans-serif;
+}
+
+.divider {
+  width: 380px;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  font-family: "spaceGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 75px;
+  letter-spacing: 2.286px;
+  width: auto;
+  background-color: inherit;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  gap: 10px;
+  border: 0;
+  border-bottom: 2px hsl(153, 71%, 59%) solid;
+}
+
+/* ====== Header styles ====== */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-name-logo {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 88px;
+  letter-spacing: -1.5px;
+}
+
+.social-media-icons {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  flex-direction: row;
+  margin-right: 40px;
+  margin-top: -15px;
+}
+
+.social-media-icons li a img {
+  width: 35px;
+  height: auto;
+}
+
+/* ====== Main styles ====== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-text-greeting {
+  text-align: center;
+  font-size: 40px;
+}
+
+.main-text-greeting span {
+  border-bottom: hsl(153, 71%, 59%) 4px solid;
+}
+
+.main-text {
+  text-align: center;
+  font-size: 24px;
+  color: hsl(0, 0%, 85%);
+}
+
+/* ====== Technologies styles ===== = */
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.technologies-container h1 {
+  font-size: 40px;
+}
+
+.technologies-container p {
+  font-size: 24px;
+  color: hsl(0, 0%, 85%);
+  margin-top: -20px;
+}
+
+/* ====== Technologies styles ===== = */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+/*# sourceMappingURL=main.css.map */
