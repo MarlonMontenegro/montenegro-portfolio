@@ -74,6 +74,7 @@ $breakpoint-desktop: 1024px
   flex-direction: column
   align-items: center
   justify-content: center
+  text-align: center
 
 /* ====== Mixin for standard styles ====== */
 
@@ -103,6 +104,9 @@ body
   color: $neutral-white
   font-family: $space-grotesk-font
 
+ul
+  list-style: none
+
 .divider
   width: 380px
   height: 2px
@@ -112,7 +116,6 @@ body
 
 .btn
   @include btn-idle
-
 
 /* ====== Header styles ====== */
 //Social Media Icons
@@ -175,3 +178,53 @@ body
 .footer-container
   @include flex-behavior-column
   padding-bottom: 50px
+
+
+/* ====== Projects styles  ====== */
+.projects-container
+  @include flex-behavior-column
+
+.title-container
+  display: flex
+  flex-direction: row
+  gap: 10px
+
+.title
+  font-size: $heading-l-size
+
+.btn-project
+  font-size: 18px
+  margin-left: 50px
+  line-height: 50px
+  margin-top: 27px
+
+
+.project img
+  width: 343px
+  height: auto
+  padding-top: 20px
+
+.project h2
+  text-transform: uppercase
+  text-align: start
+
+.project ul
+  display: flex
+  flex-direction: row
+  gap: 15px
+  color:  $neutral-grey
+  font-weight: 500
+  margin-left: -40px
+
+.project li
+  text-align: start
+  font-size: 18px
+
+.btn-container-projects
+  display: flex
+  gap: 20px
+
+
+.btn-projects
+  font-size: 18px
+  line-height: 45px
