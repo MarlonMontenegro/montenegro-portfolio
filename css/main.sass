@@ -103,12 +103,15 @@ body
   background-color: $primary-black
   color: $neutral-white
   font-family: $space-grotesk-font
+  margin: 0
+  padding: 0
+
 
 ul
   list-style: none
 
 .divider
-  width: 380px
+  width: 370px
   height: 2px
   background-color: $neutral-white
   margin-top: 100px
@@ -116,6 +119,10 @@ ul
 
 .btn
   @include btn-idle
+
+.bg-secondary
+  background-color: $neutral-black
+
 
 /* ====== Header styles ====== */
 //Social Media Icons
@@ -145,6 +152,8 @@ ul
 
 .container
   @include flex-behavior-column
+  object-fit: cover
+
 
 .main-text-greeting
   text-align: center
@@ -157,6 +166,21 @@ ul
   text-align: center
   font-size: $heading-m-size
   color: $neutral-grey
+
+
+.profile-picture
+  width: 200px
+  object-fit: cover
+
+.rings
+  position: absolute
+  top: 350px
+  right: 140px
+  z-index: -1
+
+.rings-container
+  overflow: hidden
+
 
 
 /* ====== Technologies styles ===== = */
@@ -198,7 +222,6 @@ ul
   line-height: 50px
   margin-top: 27px
 
-
 .project img
   width: 343px
   height: auto
@@ -212,7 +235,7 @@ ul
   display: flex
   flex-direction: row
   gap: 15px
-  color:  $neutral-grey
+  color: $neutral-grey
   font-weight: 500
   margin-left: -40px
 
@@ -224,7 +247,53 @@ ul
   display: flex
   gap: 20px
 
-
 .btn-projects
   font-size: 18px
   line-height: 45px
+
+.project
+  padding-bottom: 60px
+
+/* ====== Contact form styles  ====== */
+footer
+  box-sizing: border-box
+  width: 100%
+
+.contact-container
+  @include flex-behavior-column
+
+
+.contact-container h1
+  font-size: 55px
+
+.contact-container p
+  font-size: 20px
+  padding-bottom: 60px
+
+.contact-form
+  @include flex-behavior-column
+  align-items: start
+  font-size: 20px
+  text-transform: uppercase
+  color: $neutral-grey
+  padding-bottom: 70px
+
+.btn-contact
+  font-size: 20px
+
+label
+  font-weight: 700
+  color: $neutral-grey
+  padding-left: 15px
+  padding-top: 25px
+
+input, textarea
+  border: none
+  border-bottom: 2px solid $neutral-grey
+  background-color: inherit
+  color: $neutral-white
+  padding: 10px
+  width: 350px
+  box-sizing: border-box
+  margin-bottom: 10px
+  outline: none
