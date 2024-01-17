@@ -106,7 +106,6 @@ body
   margin: 0
   padding: 0
 
-
 ul
   list-style: none
 
@@ -116,6 +115,8 @@ ul
   background-color: $neutral-white
   margin-top: 100px
   margin-bottom: 50px
+  @include tablet
+    width: 725px
 
 .btn
   @include btn-idle
@@ -129,6 +130,11 @@ ul
 
 .header-container
   @include flex-behavior-column
+  @include tablet
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 0 30px 30px
 
 .title-name-logo
   font-weight: 700
@@ -143,10 +149,23 @@ ul
   flex-direction: row
   margin-right: 40px
   margin-top: -15px
+  // Tablet layout
+  @include tablet
+    margin: 5px
 
 .social-media-icons li a img
   width: 35px
   height: auto
+  @include tablet
+    width: 30px
+
+.btn-main
+  @include tablet
+    padding-right: 580px
+    margin-top: -50px
+
+.btn-main .btn
+  font-size: 20px
 
 /* ====== Main styles ====== */
 
@@ -154,10 +173,14 @@ ul
   @include flex-behavior-column
   object-fit: cover
 
-
 .main-text-greeting
   text-align: center
   font-size: $heading-l-size
+  @include tablet
+    text-align: left
+    font-size: 70px
+    padding: 25px 100px 25px 25px
+    margin-right: 120px
 
 .main-text-greeting span
   @include border-bottom-green-effect
@@ -166,28 +189,44 @@ ul
   text-align: center
   font-size: $heading-m-size
   color: $neutral-grey
-
+  @include tablet
+    text-align: left
+    padding: 25px 120px 35px 25px
+    font-size: 28px
+    margin-top: -30px
+    margin-right: 175px
 
 .profile-picture
   width: 200px
   object-fit: cover
+  @include tablet
+    width: 300px
+    position: absolute
+    top: -40px
+    right: 2px
+    z-index: -1
 
 .rings
   position: absolute
   top: 350px
   right: 140px
   z-index: -1
+  @include tablet
+    top: 250px
+    right: 500px
 
 .rings-container
   overflow: hidden
-
-
 
 /* ====== Technologies styles ===== = */
 
 .technologies-container
   @include flex-behavior-column
-  text-align: center
+  @include tablet
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 25px
+
 
 .technologies-container h1
   font-size: $heading-l-size
@@ -204,14 +243,23 @@ ul
   padding-bottom: 50px
 
 
+
 /* ====== Projects styles  ====== */
 .projects-container
   @include flex-behavior-column
+  @include tablet
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 25px
 
 .title-container
   display: flex
   flex-direction: row
   gap: 10px
+  @include tablet
+   justify-content: space-between
+   gap: 350px
+   margin-top: 50px
 
 .title
   font-size: $heading-l-size
@@ -221,6 +269,8 @@ ul
   margin-left: 50px
   line-height: 50px
   margin-top: 27px
+  @include tablet
+    font-size: 15px
 
 .project img
   width: 343px
@@ -254,6 +304,9 @@ ul
 .project
   padding-bottom: 60px
 
+.divider-projects
+  display: none
+
 /* ====== Contact form styles  ====== */
 footer
   box-sizing: border-box
@@ -265,10 +318,18 @@ footer
 
 .contact-container h1
   font-size: 55px
+  @include tablet
+    font-size: $heading-xl-size
+
 
 .contact-container p
   font-size: 20px
   padding-bottom: 60px
+  @include tablet
+    font-size: 25px
+    margin-right: 100px
+    margin-left: 100px
+    margin-top: -40px
 
 .contact-form
   @include flex-behavior-column
@@ -280,6 +341,10 @@ footer
 
 .btn-contact
   font-size: 20px
+
+.btn-send
+  @include tablet
+    padding-left: 350px
 
 label
   font-weight: 700
@@ -297,3 +362,12 @@ input, textarea
   box-sizing: border-box
   margin-bottom: 10px
   outline: none
+  @include tablet
+    width: 500px
+
+.icon-footer-container
+  display: flex
+  gap: 150px
+
+.icon-footer-container ul
+  padding-top: 55px
