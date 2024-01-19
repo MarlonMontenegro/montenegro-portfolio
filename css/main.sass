@@ -91,6 +91,8 @@ $breakpoint-desktop: 1024px
   gap: 10px
   border: 0
   border-bottom: 2px $primary-green solid
+  cursor: pointer
+  transition: color 0.3s ease
 
 
 @mixin border-bottom-green-effect
@@ -106,7 +108,6 @@ body
   margin: 0
   padding: 0
 
-
 ul
   list-style: none
 
@@ -117,16 +118,19 @@ ul
   margin-top: 100px
   margin-bottom: 50px
   @include tablet
-    width: 80%
+    width: 90%
   @include desktop
-    width: 80%
+    width: 90%
 
 .btn
   @include btn-idle
 
+.btn:hover
+  color: $primary-green
+
+
 .bg-secondary
   background-color: $neutral-black
-
 
 /* ====== Header styles ====== */
 //Social Media Icons
@@ -159,16 +163,29 @@ ul
   @include tablet
     margin: 5px
 
-.social-media-icons li a img
+.social-media-icons object
   width: 35px
   height: auto
   @include tablet
     width: 30px
 
+.icon
+  transition: transform 0.3s ease
+  cursor: pointer
+
+.icon:hover
+  transform: scale(1.3)
+
 .btn-main
+  position: absolute
   @include tablet
-    padding-right: 580px
-    margin-top: -50px
+    bottom: 110px
+    right: 580px
+  @include desktop
+    position: absolute
+    right: 1050px
+    bottom: -220px
+    padding: 0
 
 .btn-main .btn
   font-size: 20px
@@ -206,23 +223,24 @@ ul
     font-size: 28px
     margin-top: -30px
     margin-right: 175px
+    line-height: $heading-l-line
   @include desktop
     text-align: left
     padding-left: 150px
-    margin-right: 700px
+    margin-right: 500px
 
 .profile-picture
   width: 200px
   object-fit: cover
   @include tablet
-    width: 300px
+    width: 330px
     position: absolute
-    top: -40px
+    top: 560px
     right: 2px
     z-index: -1
   @include desktop
-    right: 200px
-    top: 200px
+    right: 100px
+    top: 250px
     width: 500px
 
 .rings
@@ -231,17 +249,11 @@ ul
   right: 140px
   z-index: -1
   @include tablet
-    top: 250px
-    right: 500px
+    top: 220px
+    right: 600px
   @include desktop
-    top: 160px
-    right: 1250px
-
-.rings-container
-  overflow: hidden
-
-.btn-main
-  padding-right: 1150px
+    top: 190px
+    right: 1120px
 
 /* ====== Technologies styles ===== = */
 
@@ -264,13 +276,18 @@ ul
   color: $neutral-grey
   margin-top: -20px
 
-/* ====== Technologies styles ===== = */
+/* ============
+            Technologies styles
+                          ============== = */
 
 .footer-container
   @include flex-behavior-column
   padding-bottom: 50px
 
-/* ====== Projects styles  ====== */
+/* ================
+                Projects styles
+                         =================== */
+
 .projects-container
   @include flex-behavior-column
   @include tablet
@@ -301,15 +318,17 @@ ul
   @include tablet
     font-size: 15px
   @include desktop
-    font-size: 20px
-    margin-top: 100px
+    position: absolute
+    top: 1620px
+    right: 180px
+    font-size: 25px
 
 .project img
   width: 343px
   height: auto
   padding-top: 20px
   @include desktop
-    width: 600px
+    width: 520px
 
 .project h2
   text-transform: uppercase
@@ -331,14 +350,15 @@ ul
   display: flex
   gap: 20px
 
+
 .btn-projects
   font-size: 18px
   line-height: 45px
-  @include desktop
-    display: none
 
 .project
   padding-bottom: 60px
+  @include desktop
+    padding-bottom: 25px
 
 .divider-projects
   @include tablet
@@ -358,7 +378,6 @@ footer
     flex-direction: row
     align-items: center
 
-
 .text-contact-box
   @include desktop
     @include flex-behavior-column
@@ -373,7 +392,6 @@ footer
     padding-right: 150px
     padding-left: 90px
 
-
 .contact-container p
   font-size: 20px
   padding-bottom: 60px
@@ -383,9 +401,9 @@ footer
     margin-left: 100px
     margin-top: -40px
   @include desktop
-    font-size: 25px
+    font-size: 20px
     line-height: $heading-l-line
-    padding-left: 100px
+
 
 .contact-form
   @include flex-behavior-column
@@ -396,15 +414,14 @@ footer
   padding-bottom: 70px
   @include desktop
     padding-right: 200px
-    padding-top: 200px
+    padding-top: 20px
 
 .btn-contact
   font-size: 20px
 
-
 .btn-send
   @include tablet
-    padding-left: 350px
+    padding-left: 320px
   @include desktop
     padding-left: 410px
     font-size: 10px
@@ -437,7 +454,6 @@ input, textarea
     gap: 20px
     align-content: space-between
 
-
 .icon-footer-container ul
   padding-top: 55px
   @include desktop
@@ -446,7 +462,11 @@ input, textarea
     padding-left: 500px
 
 .rings-contact
+  @include tablet
+    position: absolute
+    left: -300px
+    top: 3655px
   @include desktop
     left: -200px
     position: absolute
-    top: 3410px
+    top: 4180px
