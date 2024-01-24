@@ -1,10 +1,14 @@
-/* ====== Import Fonts  ====== */
 
+/* ================
+               Import Fonts
+                         =================== */
 @font-face
   font-family: spaceGrotesk
   src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype')
 
-/* ====== Colors variables  ====== */
+/* ================
+                Colors variables
+                         =================== */
 
 $primary-black: hsl(0, 0%, 8%)
 $primary-green: hsl(153, 71%, 59%)
@@ -12,7 +16,9 @@ $neutral-black: hsl(0, 0%, 14%)
 $neutral-grey: hsl(0, 0%, 85%)
 $neutral-white: hsl(0, 0%, 100%)
 
-/* ====== Typography variables  ====== */
+/* ================
+                Typography variables
+                         =================== */
 
 //heading XL
 
@@ -38,7 +44,9 @@ $body-size: 18px
 $body-line: 28px
 $body-wight: 500
 
-/* ====== Buttons variables  ====== */
+/* ================
+                Buttons variables
+                         =================== */
 
 //Button typography
 
@@ -54,10 +62,17 @@ $btn-height: 100px
 
 //BreakPoints
 
+$breakpoint-phone: 375px
 $breakpoint-tablet: 768px
 $breakpoint-desktop: 1024px
 
-/* ====== Mixin for responsive behavior ====== */
+/* ================
+                Mixin for responsive behavior
+                         =================== */
+
+@mixin phone
+  @media (min-width: $breakpoint-phone)
+    @content
 
 @mixin tablet
   @media (min-width: $breakpoint-tablet)
@@ -76,8 +91,9 @@ $breakpoint-desktop: 1024px
   justify-content: center
   text-align: center
 
-/* ====== Mixin for standard styles ====== */
-
+/* ================
+                Mixin for standard styles
+                         =================== */
 @mixin btn-idle
   font-family: $space-grotesk-font
   font-weight: $btn-weight
@@ -99,24 +115,26 @@ $breakpoint-desktop: 1024px
   border-bottom: $primary-green 4px solid
 
 
-/* ====== General styles ====== */
+/* ================
+                General styles
+                         =================== */
 
 body
   background-color: $primary-black
   color: $neutral-white
   font-family: $space-grotesk-font
   margin: 0
-  padding: 0
 
 ul
   list-style: none
 
 .divider
-  width: 90%
   height: 2px
   background-color: $neutral-white
   margin-top: 100px
   margin-bottom: 50px
+  @include phone
+  width: 93%
   @include tablet
     width: 90%
   @include desktop
@@ -132,7 +150,9 @@ ul
 .bg-secondary
   background-color: $neutral-black
 
-/* ====== Header styles ====== */
+/* ================
+                Header styles
+                         =================== */
 //Social Media Icons
 
 .header-container
@@ -178,20 +198,21 @@ ul
 
 .btn-main
   position: absolute
+  top: 750px
   @include tablet
-    bottom: 110px
-    right: 580px
+    top: 850px
+    left: 25px
+    margin-right: 200px
   @include desktop
-    position: absolute
-    right: 1050px
-    bottom: -220px
-    padding: 0
+    top: 750px
+    left: 146px
 
 .btn-main .btn
   font-size: 20px
 
-/* ====== Main styles ====== */
-
+/* ================
+                Main styles
+                         =================== */
 .container
   @include flex-behavior-column
   object-fit: cover
@@ -255,8 +276,9 @@ ul
     top: 190px
     right: 1120px
 
-/* ====== Technologies styles ===== = */
-
+/* ================
+                Technologies styles
+                         =================== */
 .technologies-container
   @include flex-behavior-column
   @include tablet
@@ -311,10 +333,7 @@ ul
     padding-right: 350px
 
 .btn-project
-  font-size: 18px
-  margin-left: 50px
-  line-height: 50px
-  margin-top: 27px
+  display: none
   @include tablet
     font-size: 15px
   @include desktop
@@ -350,7 +369,6 @@ ul
   display: flex
   gap: 20px
 
-
 .btn-projects
   font-size: 18px
   line-height: 45px
@@ -365,8 +383,9 @@ ul
     display: none
   @include desktop
     display: none
-
-/* ====== Contact form styles  ====== */
+/* ================
+                Contact form styles
+                         =================== */
 footer
   box-sizing: border-box
   width: 100%
@@ -403,7 +422,6 @@ footer
   @include desktop
     font-size: 20px
     line-height: $heading-l-line
-
 
 .contact-form
   @include flex-behavior-column
@@ -449,24 +467,28 @@ input, textarea
 
 .icon-footer-container
   display: flex
-  gap: 150px
+  flex-direction: column
   @include desktop
+    flex-direction: row
     gap: 20px
     align-content: space-between
 
 .icon-footer-container ul
-  padding-top: 55px
+  padding-top: 20px
   @include desktop
     display: flex
     align-content: space-between
-    padding-left: 500px
+    margin-top: 43px
+    padding-left: 300px
 
 .rings-contact
+  position: absolute
+  right: 100px
+  width: 400px
+  top: 5915px
   @include tablet
-    position: absolute
     left: -300px
     top: 3655px
   @include desktop
     left: -200px
-    position: absolute
     top: 4180px

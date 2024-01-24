@@ -1,20 +1,33 @@
-/* ====== Import Fonts  ====== */
+/* ================
+ *             Import Fonts
+ *                       =================== */
 @font-face {
   font-family: spaceGrotesk;
   src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
 }
-/* ====== Colors variables  ====== */
-/* ====== Typography variables  ====== */
-/* ====== Buttons variables  ====== */
-/* ====== Mixin for responsive behavior ====== */
-/* ====== Mixin for standard styles ====== */
-/* ====== General styles ====== */
+/* ================
+ *              Colors variables
+ *                       =================== */
+/* ================
+ *              Typography variables
+ *                       =================== */
+/* ================
+ *              Buttons variables
+ *                       =================== */
+/* ================
+ *              Mixin for responsive behavior
+ *                       =================== */
+/* ================
+ *              Mixin for standard styles
+ *                       =================== */
+/* ================
+ *              General styles
+ *                       =================== */
 body {
   background-color: hsl(0, 0%, 8%);
   color: hsl(0, 0%, 100%);
   font-family: "spaceGrotesk", sans-serif;
   margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -22,11 +35,11 @@ ul {
 }
 
 .divider {
-  width: 90%;
   height: 2px;
   background-color: hsl(0, 0%, 100%);
   margin-top: 100px;
   margin-bottom: 50px;
+  width: 93%;
 }
 @media (min-width: 768px) {
   .divider {
@@ -64,7 +77,9 @@ ul {
   background-color: hsl(0, 0%, 14%);
 }
 
-/* ====== Header styles ====== */
+/* ================
+ *              Header styles
+ *                       =================== */
 .header-container {
   display: flex;
   flex-direction: column;
@@ -129,19 +144,19 @@ ul {
 
 .btn-main {
   position: absolute;
+  top: 750px;
 }
 @media (min-width: 768px) {
   .btn-main {
-    bottom: 110px;
-    right: 580px;
+    top: 850px;
+    left: 25px;
+    margin-right: 200px;
   }
 }
 @media (min-width: 1024px) {
   .btn-main {
-    position: absolute;
-    right: 1050px;
-    bottom: -220px;
-    padding: 0;
+    top: 750px;
+    left: 146px;
   }
 }
 
@@ -149,7 +164,9 @@ ul {
   font-size: 20px;
 }
 
-/* ====== Main styles ====== */
+/* ================
+ *              Main styles
+ *                       =================== */
 .container {
   display: flex;
   flex-direction: column;
@@ -247,7 +264,9 @@ ul {
   }
 }
 
-/* ====== Technologies styles ===== = */
+/* ================
+ *              Technologies styles
+ *                       =================== */
 .technologies-container {
   display: flex;
   flex-direction: column;
@@ -334,10 +353,7 @@ ul {
 }
 
 .btn-project {
-  font-size: 18px;
-  margin-left: 50px;
-  line-height: 50px;
-  margin-top: 27px;
+  display: none;
 }
 @media (min-width: 768px) {
   .btn-project {
@@ -413,7 +429,9 @@ ul {
   }
 }
 
-/* ====== Contact form styles  ====== */
+/* ================
+ *              Contact form styles
+ *                       =================== */
 footer {
   box-sizing: border-box;
   width: 100%;
@@ -546,29 +564,36 @@ input, textarea {
 
 .icon-footer-container {
   display: flex;
-  gap: 150px;
+  flex-direction: column;
 }
 @media (min-width: 1024px) {
   .icon-footer-container {
+    flex-direction: row;
     gap: 20px;
     align-content: space-between;
   }
 }
 
 .icon-footer-container ul {
-  padding-top: 55px;
+  padding-top: 20px;
 }
 @media (min-width: 1024px) {
   .icon-footer-container ul {
     display: flex;
     align-content: space-between;
-    padding-left: 500px;
+    margin-top: 43px;
+    padding-left: 300px;
   }
 }
 
+.rings-contact {
+  position: absolute;
+  right: 100px;
+  width: 400px;
+  top: 5915px;
+}
 @media (min-width: 768px) {
   .rings-contact {
-    position: absolute;
     left: -300px;
     top: 3655px;
   }
@@ -576,7 +601,6 @@ input, textarea {
 @media (min-width: 1024px) {
   .rings-contact {
     left: -200px;
-    position: absolute;
     top: 4180px;
   }
 }
