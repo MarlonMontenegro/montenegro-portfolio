@@ -143,20 +143,16 @@ ul {
 }
 
 .btn-main {
-  position: absolute;
-  top: 750px;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   .btn-main {
-    top: 850px;
-    left: 25px;
-    margin-right: 200px;
+    margin-right: 600px;
   }
 }
 @media (min-width: 1024px) {
   .btn-main {
-    top: 750px;
-    left: 146px;
+    margin-right: 1120px;
   }
 }
 
